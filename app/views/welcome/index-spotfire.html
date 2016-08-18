@@ -1,0 +1,43 @@
+<html>
+	<style>
+		#demoViz {
+			width: 500px;
+			height: 500px;
+		}
+	</style>
+	<head>
+		<script type="text/javascript" src="https://spotfire.cloud.tibco.com/spotfire/wp/GetJavaScriptApi.ashx?Version=7.5"></script>
+
+		<script type="text/javascript">
+			var c_serverUrl = "https://spotfire.cloud.tibco.com/spotfire/wp/";
+			var c_analysisPath = "/users/elvis/Public/Workbook2";
+
+			var c_parameters = "";
+			var customization = new spotfire.webPlayer.Customization();
+			customization.showDodPanel = false;
+			customization.showStatusBar = false;
+			customization.showToolBar = false;
+			customization.showPageNavigation = false;
+			customization.showClose = false;
+			customization.showAnalysisInfo = true;
+			customization.showExportFile = true;
+			customization.showExportVisualization = true;
+			customization.showUndoRedo = true;
+			customization.showFilterPanel = true;
+			var app;
+
+			var c_reloadAnalysisInstance = false;
+
+			window.onload = function() {
+				app = new spotfire.webPlayer.Application(c_serverUrl, customization, c_analysisPath, c_parameters, c_reloadAnalysisInstance);
+
+				var viewOne = app.openDocument("demoViz", "IndividualExp", customization);
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<div id = "demoViz"></div>
+	</body>
+</html>
