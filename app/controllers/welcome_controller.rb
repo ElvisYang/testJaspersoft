@@ -18,10 +18,6 @@ class WelcomeController < ApplicationController
 		  report 'public/Samples/Reports/01._Geographic_Results_by_Segment_Report'
 		  params({ :Value1 => 'Value1' })
 		end
-
-		JasperserverRails::Jasperserver.new.create_organization("test") do
-
-		end
 	end
 
 	def generate

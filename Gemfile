@@ -49,5 +49,5 @@ end
 # gem 'jasperserver-rails'
 #gem 'jasperserver-rails', path: "/Users/elvis/Project/rails-jasperserver"
 
-gem 'jasperserver-rails'
+gem 'jasperserver-rails', '~> 1.0.0'
 # gem 'pry-rails'
